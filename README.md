@@ -48,4 +48,14 @@ Dari hasil menjalankan program, harus menunggu beberapa saat untuk load aplikasi
 # Commit 5 Reflection Notes
 
 Dalam aplikasi, sebuah threadpool adalah pola desain perangkat lunak untuk mencapai concurency eksekusi dalam sebuah program komputer. Sering juga disebut sebagai model pekerja tereplikasi atau model pekerja-kru, sebuah threadpool menjaga beberapa thread yang menunggu tugas untuk dialokasikan untuk eksekusi concurency oleh program pengawas. Dengan menjaga threadpool, model ini meningkatkan kinerja dan menghindari latensi dalam eksekusi karena seringnya penciptaan dan penghancuran thread untuk tugas-tugas yang berumur pendek. Jumlah thread yang tersedia disesuaikan dengan sumber daya komputasi yang tersedia untuk program, seperti antrian tugas paralel setelah selesai dieksekusi.
+
+# Commit Bonus Reflection Notes
+
+Keseluruhan fungsi digabungkan menjadi satu dalam `impl WebServer`, jadi fungsi seperti build, run, dan compare sudah ada di dalamnya semua. Bentuk akhirnya menjadi class yang bisa dipanggil langsung di main lalu dijalankan.
+    <pre>
+        fn main() {
+            let server = WebServer::build("127.0.0.1:7878", 4);
+            server.run();
+        }
+    </pre>
 </details>
