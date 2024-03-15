@@ -14,4 +14,16 @@ Browser menandakan akhir dari sebuah permintaan HTTP dengan mengirimkan dua kara
 <h3>Commit 2 Reflection Notes</h3>
 
 ![Commit 2 screen capture](/assets/commit2.png)
+
+<h3>Commit 3 Reflection Notes</h3>
+Saat ini, blok if dan else memiliki banyak pengulangan: keduanya membaca file dan menuliskan konten file ke stream. Satu-satunya perbedaan adalah baris status dan nama file. Mari buat kode lebih ringkas dengan menarik perbedaan-perbedaan tersebut ke dalam blok if dan else terpisah yang akan menetapkan nilai dari baris status dan nama file ke variabel; kemudian, variabel-variabel tersebut dapat digunakan tanpa syarat dalam kode untuk membaca file dan menulis respons. Berikut adalah hasilnya setelah mengganti blok if dan else yang besar
+    <pre>
+        let (status_line, filename) = if buffer.starts_with(get) {
+            ("HTTP/1.1 200 OK\r\n\r\n", "hello.html")
+        } else {
+            ("HTTP/1.1 404 NOT FOUND\r\n\r\n", "404.html")
+        };
+    </pre>
+    
+![Commit 3 screen capture](/assets/commit3.png)
 </details>
