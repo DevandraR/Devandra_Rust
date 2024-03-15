@@ -44,4 +44,8 @@ Saat ini, blok if dan else memiliki banyak pengulangan: keduanya membaca file da
     </pre>
 
 Dari hasil menjalankan program, harus menunggu beberapa saat untuk load aplikasi, ini disimulasikan dengan `thread::sleep`, ini mensimulasikan jika aplikasi diakses oleh banyak pengguna, penyebab lainnya adalah karena ini adalah aplikasi single thread, jadi jika thread yang ada berhenti, maka seluruh akses ke aplikasi jadi harus menunggu. Saat yang mengakses aplikasi juga banyak, jika single thread maka akan memerlukan beberapa waktu untuk mengakses aplikasi, karena harus antri terlebih dahulu dengan request lainnya. 
+
+# Commit 5 Reflection Notes
+
+Dalam aplikasi, sebuah threadpool adalah pola desain perangkat lunak untuk mencapai concurency eksekusi dalam sebuah program komputer. Sering juga disebut sebagai model pekerja tereplikasi atau model pekerja-kru, sebuah threadpool menjaga beberapa thread yang menunggu tugas untuk dialokasikan untuk eksekusi concurency oleh program pengawas. Dengan menjaga threadpool, model ini meningkatkan kinerja dan menghindari latensi dalam eksekusi karena seringnya penciptaan dan penghancuran thread untuk tugas-tugas yang berumur pendek. Jumlah thread yang tersedia disesuaikan dengan sumber daya komputasi yang tersedia untuk program, seperti antrian tugas paralel setelah selesai dieksekusi.
 </details>
